@@ -8,48 +8,57 @@
 
 import UIKit
 import Firebase
-class MainChatRoomVC: UIViewController {
+class MainChatRoomVC: UIViewController , UITableViewDelegate , UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
+        let cell = self.roomsTable.dequeueReusableCell(withIdentifier: "roomCell")!
+        cell.textLabel?.text = "Hello"
+        
+        return cell
+    }
+    
+    
+    
+    @IBOutlet weak var roomsTable: UITableView!
     var formScreen : FormScreenVC?
-  
+    
     override func viewWillAppear(_ animated: Bool) {
         if Auth.auth().currentUser?.uid == nil{
-//            navigationController?.pushViewController(formScreen!, animated: true)
-
+           
             self.formScreen?.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
             self.present(formScreen! , animated:  true , completion: nil)
         }
     }
+    
+    // ** ** * * * **  DidLoad *********** ** * *  */
     override func viewDidLoad() {
         super.viewDidLoad()
- formScreen = self.storyboard?.instantiateViewController(withIdentifier: "formScreen") as! FormScreenVC
+        formScreen = self.storyboard?.instantiateViewController(withIdentifier: "formScreen") as! FormScreenVC
         // Do any additional setup after loading the view.
+        
+        self.roomsTable.delegate = self
+        self.roomsTable.dataSource = self
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
     
     
     @IBAction func didPressLogout(_ sender: Any) {
-         
-         do {
-             try Auth.auth().signOut()
-         } catch let signOutError as NSError {
-           print ("Error signing out: %@", signOutError)
-         }
-         
-       
-          
+        
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
         self.formScreen?.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(formScreen! , animated:  true , completion: nil)
-         
-     }
-
+        
+    }
+    
 }

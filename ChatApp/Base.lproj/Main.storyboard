@@ -175,7 +175,68 @@
                     <view key="view" contentMode="scaleToFill" id="Z1h-4L-Lsf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="As1-Zz-gV1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzX-Xj-AoM">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Chat Room Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T33-PO-C5Q">
+                                                <rect key="frame" x="10" y="0.0" width="294" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="T33-PO-C5Q" firstAttribute="leading" secondItem="tzX-Xj-AoM" secondAttribute="leading" constant="10" id="VW7-rj-xe7"/>
+                                            <constraint firstItem="T33-PO-C5Q" firstAttribute="top" secondItem="tzX-Xj-AoM" secondAttribute="top" id="WIs-SW-DHh"/>
+                                            <constraint firstAttribute="bottom" secondItem="T33-PO-C5Q" secondAttribute="bottom" id="bcS-mG-OF4"/>
+                                            <constraint firstAttribute="trailing" secondItem="T33-PO-C5Q" secondAttribute="trailing" constant="10" id="bpW-hb-btU"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOD-3m-AJV">
+                                        <rect key="frame" x="314" y="0.0" width="100" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="oB6-Y3-oQM"/>
+                                        </constraints>
+                                        <state key="normal" title="Create Room">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lUC-Ls-MMd"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P4R-XL-9hx">
+                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomCell" id="8OU-aO-XJB">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8OU-aO-XJB" id="RwX-s4-tIr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="As1-Zz-gV1" firstAttribute="top" secondItem="atW-y1-XRx" secondAttribute="top" id="5uV-2K-6nq"/>
+                            <constraint firstItem="atW-y1-XRx" firstAttribute="trailing" secondItem="P4R-XL-9hx" secondAttribute="trailing" id="CHy-3p-Gzd"/>
+                            <constraint firstItem="atW-y1-XRx" firstAttribute="bottom" secondItem="P4R-XL-9hx" secondAttribute="bottom" id="dik-gp-gTF"/>
+                            <constraint firstItem="As1-Zz-gV1" firstAttribute="leading" secondItem="atW-y1-XRx" secondAttribute="leading" id="sed-qd-dts"/>
+                            <constraint firstItem="P4R-XL-9hx" firstAttribute="leading" secondItem="atW-y1-XRx" secondAttribute="leading" id="vPY-Vu-mvO"/>
+                            <constraint firstItem="atW-y1-XRx" firstAttribute="trailing" secondItem="As1-Zz-gV1" secondAttribute="trailing" id="yhg-pc-YXv"/>
+                            <constraint firstItem="P4R-XL-9hx" firstAttribute="top" secondItem="As1-Zz-gV1" secondAttribute="bottom" id="z6a-j9-vv3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="atW-y1-XRx"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chat Rooms" id="lNJ-Q6-4uk">
@@ -186,6 +247,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="roomsTable" destination="P4R-XL-9hx" id="RNS-CK-1Ze"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwy-EJ-ht9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
