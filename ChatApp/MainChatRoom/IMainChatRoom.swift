@@ -7,3 +7,36 @@
 //
 
 import Foundation
+
+
+
+protocol IMainChatRoomVC {
+    func onSuccess()
+    func onFail()
+    //*************//
+    func onRoomsReceived(roomsList :[Room])
+}
+
+
+protocol IMainChatRoomPresenter {
+    func createNewRoom(roomName : String)
+    func onRoomCreated()
+    func onCreatingRoomFail()
+    
+    
+    //*************//
+    func roomObserver()
+    
+    func onRecieveFirebaseRooms(roomsList :[Room])
+    
+    
+}
+protocol IMainChatRoomModel {
+    func createRoom(roomName : String)
+    
+    //*** ** * * ****  //
+    func roomObserver()
+}
+
+
+

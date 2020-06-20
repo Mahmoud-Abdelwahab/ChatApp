@@ -206,6 +206,9 @@
                                         <state key="normal" title="Create Room">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="CreateRoomBtn:" destination="JEb-RY-0AX" eventType="touchUpInside" id="G0O-UY-KSL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -248,6 +251,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="roomTextField" destination="T33-PO-C5Q" id="nQv-qb-iYA"/>
                         <outlet property="roomsTable" destination="P4R-XL-9hx" id="RNS-CK-1Ze"/>
                     </connections>
                 </viewController>
