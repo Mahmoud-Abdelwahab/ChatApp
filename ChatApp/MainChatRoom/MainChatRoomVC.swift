@@ -45,6 +45,13 @@ class MainChatRoomVC: UIViewController , UITableViewDelegate , UITableViewDataSo
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chatRoom = self.storyboard?.instantiateViewController(withIdentifier: "ChatRoom") as! ChatRoomVC
+        
+        self.navigationController?.pushViewController(chatRoom, animated: true)
+        
+        
+    }
     
     @IBAction func CreateRoomBtn(_ sender: Any) {
         

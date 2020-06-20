@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		635780B9816B403F6671766B /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5EAD229D5A8199680946D /* Pods_ChatApp.framework */; };
 		BB2D16EC249E024B00F09B3F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D16EB249E024B00F09B3F /* Room.swift */; };
+		BB2D16EF249E755200F09B3F /* ChatRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D16EE249E755200F09B3F /* ChatRoomVC.swift */; };
 		BB2E2137249B60CE00E2D3F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E2136249B60CE00E2D3F0 /* AppDelegate.swift */; };
 		BB2E2139249B60CE00E2D3F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E2138249B60CE00E2D3F0 /* SceneDelegate.swift */; };
 		BB2E213E249B60CE00E2D3F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB2E213C249B60CE00E2D3F0 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		27CC7000AB4706AF7F507E87 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2BC5EAD229D5A8199680946D /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2D16EB249E024B00F09B3F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		BB2D16EE249E755200F09B3F /* ChatRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomVC.swift; sourceTree = "<group>"; };
 		BB2E2133249B60CE00E2D3F0 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2E2136249B60CE00E2D3F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB2E2138249B60CE00E2D3F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 			path = POJOS;
 			sourceTree = "<group>";
 		};
+		BB2D16ED249E750D00F09B3F /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				BB2D16EE249E755200F09B3F /* ChatRoomVC.swift */,
+			);
+			path = ChatRoom;
+			sourceTree = "<group>";
+		};
 		BB2E212A249B60CE00E2D3F0 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 				BB2E2154249B660400E2D3F0 /* Resources */,
 				BB2E214B249B62CA00E2D3F0 /* MainChatRoom */,
 				BB2E214A249B62AE00E2D3F0 /* FormScreen */,
+				BB2D16ED249E750D00F09B3F /* ChatRoom */,
 				BB2E213C249B60CE00E2D3F0 /* Main.storyboard */,
 				BB2E2136249B60CE00E2D3F0 /* AppDelegate.swift */,
 				BB2E2138249B60CE00E2D3F0 /* SceneDelegate.swift */,
@@ -300,6 +311,7 @@
 				BBDCF402249C6AB7007A5C84 /* IOkAlert.swift in Sources */,
 				BB2E2153249B639A00E2D3F0 /* IMainChatRoom.swift in Sources */,
 				BB2D16EC249E024B00F09B3F /* Room.swift in Sources */,
+				BB2D16EF249E755200F09B3F /* ChatRoomVC.swift in Sources */,
 				BB2E2151249B638C00E2D3F0 /* MainChatRoomModel.swift in Sources */,
 				BBDCF404249C6AF6007A5C84 /* IViewAdvancedAlert.swift in Sources */,
 				BBDCF3F5249C31A2007A5C84 /* FormScreenVC.swift in Sources */,
