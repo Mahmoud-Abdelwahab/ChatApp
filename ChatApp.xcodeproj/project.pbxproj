@@ -21,6 +21,14 @@
 		BB2E2158249B675B00E2D3F0 /* ChatLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BB2E2157249B675B00E2D3F0 /* ChatLogo.png */; };
 		BBDCF3F3249BE266007A5C84 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF3F2249BE266007A5C84 /* FormCell.swift */; };
 		BBDCF3F5249C31A2007A5C84 /* FormScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF3F4249C31A2007A5C84 /* FormScreenVC.swift */; };
+		BBDCF3F7249C6619007A5C84 /* IFormScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF3F6249C6619007A5C84 /* IFormScreen.swift */; };
+		BBDCF3F9249C662F007A5C84 /* FormScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF3F8249C662F007A5C84 /* FormScreenPresenter.swift */; };
+		BBDCF3FB249C6644007A5C84 /* FormScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF3FA249C6644007A5C84 /* FormScreenModel.swift */; };
+		BBDCF3FE249C6A70007A5C84 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF3FD249C6A70007A5C84 /* Alert.swift */; };
+		BBDCF400249C6A97007A5C84 /* IView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF3FF249C6A97007A5C84 /* IView.swift */; };
+		BBDCF402249C6AB7007A5C84 /* IOkAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF401249C6AB7007A5C84 /* IOkAlert.swift */; };
+		BBDCF404249C6AF6007A5C84 /* IViewAdvancedAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF403249C6AF6007A5C84 /* IViewAdvancedAlert.swift */; };
+		BBDCF406249C89BA007A5C84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBDCF405249C89BA007A5C84 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +50,14 @@
 		BB2E2157249B675B00E2D3F0 /* ChatLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChatLogo.png; sourceTree = "<group>"; };
 		BBDCF3F2249BE266007A5C84 /* FormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
 		BBDCF3F4249C31A2007A5C84 /* FormScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormScreenVC.swift; sourceTree = "<group>"; };
+		BBDCF3F6249C6619007A5C84 /* IFormScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFormScreen.swift; sourceTree = "<group>"; };
+		BBDCF3F8249C662F007A5C84 /* FormScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormScreenPresenter.swift; sourceTree = "<group>"; };
+		BBDCF3FA249C6644007A5C84 /* FormScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormScreenModel.swift; sourceTree = "<group>"; };
+		BBDCF3FD249C6A70007A5C84 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		BBDCF3FF249C6A97007A5C84 /* IView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IView.swift; sourceTree = "<group>"; };
+		BBDCF401249C6AB7007A5C84 /* IOkAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOkAlert.swift; sourceTree = "<group>"; };
+		BBDCF403249C6AF6007A5C84 /* IViewAdvancedAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IViewAdvancedAlert.swift; sourceTree = "<group>"; };
+		BBDCF405249C89BA007A5C84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +102,7 @@
 		BB2E2135249B60CE00E2D3F0 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				BBDCF3FC249C6A54007A5C84 /* Alerts */,
 				BB2E2154249B660400E2D3F0 /* Resources */,
 				BB2E214B249B62CA00E2D3F0 /* MainChatRoom */,
 				BB2E214A249B62AE00E2D3F0 /* FormScreen */,
@@ -93,6 +110,7 @@
 				BB2E2136249B60CE00E2D3F0 /* AppDelegate.swift */,
 				BB2E2138249B60CE00E2D3F0 /* SceneDelegate.swift */,
 				BB2E213F249B60D200E2D3F0 /* Assets.xcassets */,
+				BBDCF405249C89BA007A5C84 /* GoogleService-Info.plist */,
 				BB2E2141249B60D200E2D3F0 /* LaunchScreen.storyboard */,
 				BB2E2144249B60D200E2D3F0 /* Info.plist */,
 			);
@@ -102,8 +120,11 @@
 		BB2E214A249B62AE00E2D3F0 /* FormScreen */ = {
 			isa = PBXGroup;
 			children = (
-				BBDCF3F2249BE266007A5C84 /* FormCell.swift */,
 				BBDCF3F4249C31A2007A5C84 /* FormScreenVC.swift */,
+				BBDCF3F8249C662F007A5C84 /* FormScreenPresenter.swift */,
+				BBDCF3FA249C6644007A5C84 /* FormScreenModel.swift */,
+				BBDCF3F6249C6619007A5C84 /* IFormScreen.swift */,
+				BBDCF3F2249BE266007A5C84 /* FormCell.swift */,
 			);
 			path = FormScreen;
 			sourceTree = "<group>";
@@ -126,6 +147,17 @@
 				BB2E2155249B663B00E2D3F0 /* logo.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BBDCF3FC249C6A54007A5C84 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				BBDCF3FD249C6A70007A5C84 /* Alert.swift */,
+				BBDCF3FF249C6A97007A5C84 /* IView.swift */,
+				BBDCF401249C6AB7007A5C84 /* IOkAlert.swift */,
+				BBDCF403249C6AF6007A5C84 /* IViewAdvancedAlert.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		E445D0C78412299A078777DB /* Frameworks */ = {
@@ -201,6 +233,7 @@
 				BB2E2143249B60D200E2D3F0 /* LaunchScreen.storyboard in Resources */,
 				BB2E2140249B60D200E2D3F0 /* Assets.xcassets in Resources */,
 				BB2E213E249B60CE00E2D3F0 /* Main.storyboard in Resources */,
+				BBDCF406249C89BA007A5C84 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +286,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDCF402249C6AB7007A5C84 /* IOkAlert.swift in Sources */,
 				BB2E2153249B639A00E2D3F0 /* IMainChatRoom.swift in Sources */,
 				BB2E2151249B638C00E2D3F0 /* MainChatRoomModel.swift in Sources */,
+				BBDCF404249C6AF6007A5C84 /* IViewAdvancedAlert.swift in Sources */,
 				BBDCF3F5249C31A2007A5C84 /* FormScreenVC.swift in Sources */,
+				BBDCF3FB249C6644007A5C84 /* FormScreenModel.swift in Sources */,
 				BB2E214F249B637000E2D3F0 /* MainChatRoomPresenter.swift in Sources */,
 				BB2E2137249B60CE00E2D3F0 /* AppDelegate.swift in Sources */,
+				BBDCF3FE249C6A70007A5C84 /* Alert.swift in Sources */,
+				BBDCF400249C6A97007A5C84 /* IView.swift in Sources */,
 				BBDCF3F3249BE266007A5C84 /* FormCell.swift in Sources */,
 				BB2E214D249B635000E2D3F0 /* MainChatRoomVC.swift in Sources */,
 				BB2E2139249B60CE00E2D3F0 /* SceneDelegate.swift in Sources */,
+				BBDCF3F9249C662F007A5C84 /* FormScreenPresenter.swift in Sources */,
+				BBDCF3F7249C6619007A5C84 /* IFormScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -390,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
