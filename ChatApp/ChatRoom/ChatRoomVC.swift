@@ -8,7 +8,33 @@
 
 import UIKit
 import Firebase
-class ChatRoomVC: UIViewController , IChatRoomVC {
+class ChatRoomVC: UIViewController , IChatRoomVC , UITableViewDelegate , UITableViewDataSource {
+    func onReceiveMessageList(messagesList: [Message]) {
+        self.messagesList = messagesList
+        chatRoomTable.reloadData()
+    }
+    
+    
+    
+    var messagesList:[Message] = []
+    
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messagesList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = chatRoomTable.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! MessageCell
+        
+        cell.userNameText.text = messagesList[indexPath.row].senderName
+        
+        cell.messageField.text = messagesList[indexPath.row].messageText
+         
+        return cell
+    }
+    
     
     var chatRoomPresenter : ChatRoomPresenter!
     func onSuccess() {
@@ -41,6 +67,18 @@ class ChatRoomVC: UIViewController , IChatRoomVC {
         // Do any additional setup after loading the view.
         
         chatRoomPresenter = ChatRoomPresenter(chatRoomModelRef: self)
+        
+        
+        self.chatRoomTable.dataSource = self
+        self.chatRoomTable.delegate = self
+        
+        guard let roomID = room?.roomID else {
+            
+            return
+       
+        }
+        
+        chatRoomPresenter.observeMessages(roomID:roomID)
     }
 
 }

@@ -9,9 +9,11 @@
 import Foundation
 import Firebase
 class ChatRoomModel : IChatRoomModel {
+    
+    var messagesList = [Message]()
     let dataBaseRef : DatabaseReference!
     var chatRoomPresenterRef : IChatRoomPresenter!
-    init(chatRoomPresenterRef : IChatRoomPresenter!) {
+    init(chatRoomPresenterRef : IChatRoomPresenter) {
         self.chatRoomPresenterRef = chatRoomPresenterRef
         
         self.dataBaseRef = Database.database().reference()
@@ -82,6 +84,39 @@ class ChatRoomModel : IChatRoomModel {
             MyComplition(userName)
         }
         
+    }
+    
+    
+    
+    
+    
+    
+    //***** * **** **** * * Observing Messsage list Logic **************//
+    
+    
+    func observingMessages(roomID: String ) {
+        dataBaseRef.child("rooms").child(roomID).child("messages").observe(.childAdded) { (snapshot) in
+            print(snapshot)
+            
+            if let message = snapshot.value as? [String : Any]
+            {
+                guard let senderName = message["senderName"] as? String , let messageText = message["text"] as? String
+                    else{
+                        ///  no data
+                        print("No Messages Found ... ")
+                        return
+                        
+                }
+                
+                self.messagesList.append(Message(messageKey: snapshot.key, senderName: senderName, messageText: messageText))
+                self.chatRoomPresenterRef.onReceiveMessageList(messagesList: self.messagesList)
+                
+            } else{
+                ///  no data
+                print("No Messages Found ... ")
+            }
+            
+        }
     }
     
 }

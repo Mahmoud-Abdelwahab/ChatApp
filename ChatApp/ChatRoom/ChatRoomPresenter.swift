@@ -9,17 +9,28 @@
 import Foundation
 
 class ChatRoomPresenter:IChatRoomPresenter {
-    
     var chatRoomModelRef :IChatRoomVC!
+    var chatRoomModel : ChatRoomModel!
+       init(chatRoomModelRef :IChatRoomVC!) {
+           self.chatRoomModelRef = chatRoomModelRef
+        self.chatRoomModel = ChatRoomModel(chatRoomPresenterRef : self)
+       }
+       
     
-    init(chatRoomModelRef :IChatRoomVC!) {
-        self.chatRoomModelRef = chatRoomModelRef
+    func observeMessages(roomID: String) {
+        chatRoomModel.observingMessages(roomID : roomID)
+    }
+    
+    func onReceiveMessageList(messagesList: [Message]) {
+        chatRoomModelRef.onReceiveMessageList(messagesList: messagesList)
     }
     
     
+   
+    
     func saveMessage(userId: String , message : String , roomId : String)
     {
-        let chatRoomModel = ChatRoomModel(chatRoomPresenterRef: self)
+       
         chatRoomModel.saveChatMessage(userId: userId, message: message, roomId: roomId)
     }
     
