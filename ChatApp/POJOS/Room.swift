@@ -11,6 +11,7 @@ import Foundation
 struct  Room :Codable {
     var userID : String?
     var roomName : String?
+    var roomID : String?
     
 }
 

@@ -13,28 +13,16 @@ protocol IChatRoomVC {
     func onSuccess()
     func onFail()
     //*************//
-    func onRoomsReceived(roomsList :[Room])
-}
+    }
 
 
 protocol IChatRoomPresenter {
-    func createNewRoom(roomName : String)
-    func onRoomCreated()
-    func onCreatingRoomFail()
+    func saveMessage(userId: String , message : String ,  roomId : String)
     
-    
-    //*************//
-    func roomObserver()
-    
-    func onRecieveFirebaseRooms(roomsList :[Room])
-    
-    
+    func onMessageSaved()
 }
 protocol IChatRoomModel {
-    func createRoom(roomName : String)
-    
-    //*** ** * * ****  //
-    func roomObserver()
+    func saveChatMessage(userId: String , message : String,  roomId : String)
 }
 
 

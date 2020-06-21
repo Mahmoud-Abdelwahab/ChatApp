@@ -61,7 +61,9 @@ class MainChatRoomModel : IMainChatRoomModel{
             guard let data = snapShot.value as? Dictionary<String , Any> else { return }
             
               print(data["userID"])
-            self.roomList.append(Room(userID: data["userID"] as! String, roomName: data["roomName"] as! String))
+            
+           
+            self.roomList.append(Room(userID: data["userID"] as! String, roomName: data["roomName"] as! String, roomID:snapShot.key ))
             
            // count = count + 1
             
