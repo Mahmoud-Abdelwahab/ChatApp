@@ -42,8 +42,8 @@ class ChatRoomModel : IChatRoomModel {
             guard let userName = userName , userName.isEmpty == false else {return} // creat var useName if userName is not equal nill  and not eamplty also
             // here save message in Room Directly
             let room =  self.dataBaseRef.child("rooms").child(roomId)
-            
-            let dataArray : [String : Any] = ["senderName" : userName , "text" : message]
+            guard let sID = Auth.auth().currentUser?.uid else{return}
+            let dataArray : [String : Any] = ["senderId":sID ,"senderName" : userName , "text" : message ]
             
             room.child("messages").childByAutoId().setValue(dataArray) { (error, referance) in
                 
@@ -100,7 +100,7 @@ class ChatRoomModel : IChatRoomModel {
             
             if let message = snapshot.value as? [String : Any]
             {
-                guard let senderName = message["senderName"] as? String , let messageText = message["text"] as? String
+                guard let senderName = message["senderName"] as? String , let messageText = message["text"] as? String ,  let UID = message["senderId"] as? String
                     else{
                         ///  no data
                         print("No Messages Found ... ")
@@ -108,7 +108,9 @@ class ChatRoomModel : IChatRoomModel {
                         
                 }
                 
-                self.messagesList.append(Message(messageKey: snapshot.key, senderName: senderName, messageText: messageText))
+                
+                
+                self.messagesList.append(Message(messageKey: snapshot.key, senderName: senderName, messageText: messageText, senderID: UID))
                 self.chatRoomPresenterRef.onReceiveMessageList(messagesList: self.messagesList)
                 
             } else{
