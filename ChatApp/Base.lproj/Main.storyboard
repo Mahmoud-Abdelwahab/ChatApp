@@ -266,9 +266,67 @@
                     <view key="view" contentMode="scaleToFill" id="7aF-XY-Egf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bab-IG-h1P">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Pd-iC-4T6">
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="60"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="type your message here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RGb-BT-idU">
+                                                <rect key="frame" x="10" y="0.0" width="324" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="RGb-BT-idU" secondAttribute="bottom" id="6Ea-NG-OTq"/>
+                                            <constraint firstAttribute="trailing" secondItem="RGb-BT-idU" secondAttribute="trailing" constant="10" id="L2m-9j-qV2"/>
+                                            <constraint firstItem="RGb-BT-idU" firstAttribute="leading" secondItem="5Pd-iC-4T6" secondAttribute="leading" constant="10" id="X6f-ah-zBW"/>
+                                            <constraint firstItem="RGb-BT-idU" firstAttribute="top" secondItem="5Pd-iC-4T6" secondAttribute="top" id="bD8-ZO-uCe"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCm-ok-2AP">
+                                        <rect key="frame" x="344" y="0.0" width="70" height="60"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Vkg-EF-iJd"/>
+                                        </constraints>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendBtn:" destination="lWv-zM-sbq" eventType="touchUpInside" id="Jcl-HC-5v8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="pl1-l8-abQ"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rlx-7b-zpH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bab-IG-h1P" firstAttribute="bottom" secondItem="Ys2-aY-ukY" secondAttribute="bottom" id="9u3-jo-fzl"/>
+                            <constraint firstItem="bab-IG-h1P" firstAttribute="top" secondItem="rlx-7b-zpH" secondAttribute="bottom" id="SMa-U8-Oar"/>
+                            <constraint firstItem="rlx-7b-zpH" firstAttribute="top" secondItem="Ys2-aY-ukY" secondAttribute="top" id="TPS-76-8Mr"/>
+                            <constraint firstItem="Ys2-aY-ukY" firstAttribute="trailing" secondItem="rlx-7b-zpH" secondAttribute="trailing" id="bZ0-wd-pce"/>
+                            <constraint firstItem="Ys2-aY-ukY" firstAttribute="trailing" secondItem="bab-IG-h1P" secondAttribute="trailing" id="gB7-ER-vRg"/>
+                            <constraint firstItem="bab-IG-h1P" firstAttribute="leading" secondItem="Ys2-aY-ukY" secondAttribute="leading" id="iM8-nX-uzk"/>
+                            <constraint firstItem="rlx-7b-zpH" firstAttribute="leading" secondItem="Ys2-aY-ukY" secondAttribute="leading" id="zDt-Rl-mYh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ys2-aY-ukY"/>
                     </view>
+                    <connections>
+                        <outlet property="chatRoomTable" destination="rlx-7b-zpH" id="b5V-Zu-bTa"/>
+                        <outlet property="messageFeild" destination="RGb-BT-idU" id="Qlf-ST-rpC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fI-Vv-Z0Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -282,6 +340,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VHB-Ul-XpL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.18924492385786806" green="0.15856880330230583" blue="0.093205411721539455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>

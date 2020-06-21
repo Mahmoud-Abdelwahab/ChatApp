@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		635780B9816B403F6671766B /* Pods_ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC5EAD229D5A8199680946D /* Pods_ChatApp.framework */; };
+		BB239486249F2D2500610F4B /* IChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB239485249F2D2500610F4B /* IChatRoom.swift */; };
+		BB239488249F2E1A00610F4B /* ChatRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB239487249F2E1A00610F4B /* ChatRoomPresenter.swift */; };
+		BB23948A249F2E4100610F4B /* ChatRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB239489249F2E4100610F4B /* ChatRoomModel.swift */; };
 		BB2D16EC249E024B00F09B3F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D16EB249E024B00F09B3F /* Room.swift */; };
 		BB2D16EF249E755200F09B3F /* ChatRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D16EE249E755200F09B3F /* ChatRoomVC.swift */; };
 		BB2E2137249B60CE00E2D3F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E2136249B60CE00E2D3F0 /* AppDelegate.swift */; };
@@ -37,6 +40,9 @@
 		20123D235838305CBD06EAF2 /* Pods-ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.release.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		27CC7000AB4706AF7F507E87 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2BC5EAD229D5A8199680946D /* Pods_ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB239485249F2D2500610F4B /* IChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IChatRoom.swift; sourceTree = "<group>"; };
+		BB239487249F2E1A00610F4B /* ChatRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomPresenter.swift; sourceTree = "<group>"; };
+		BB239489249F2E4100610F4B /* ChatRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomModel.swift; sourceTree = "<group>"; };
 		BB2D16EB249E024B00F09B3F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		BB2D16EE249E755200F09B3F /* ChatRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomVC.swift; sourceTree = "<group>"; };
 		BB2E2133249B60CE00E2D3F0 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				BB2D16EE249E755200F09B3F /* ChatRoomVC.swift */,
+				BB239487249F2E1A00610F4B /* ChatRoomPresenter.swift */,
+				BB239489249F2E4100610F4B /* ChatRoomModel.swift */,
+				BB239485249F2D2500610F4B /* IChatRoom.swift */,
 			);
 			path = ChatRoom;
 			sourceTree = "<group>";
@@ -308,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB239486249F2D2500610F4B /* IChatRoom.swift in Sources */,
 				BBDCF402249C6AB7007A5C84 /* IOkAlert.swift in Sources */,
 				BB2E2153249B639A00E2D3F0 /* IMainChatRoom.swift in Sources */,
 				BB2D16EC249E024B00F09B3F /* Room.swift in Sources */,
@@ -315,8 +325,10 @@
 				BB2E2151249B638C00E2D3F0 /* MainChatRoomModel.swift in Sources */,
 				BBDCF404249C6AF6007A5C84 /* IViewAdvancedAlert.swift in Sources */,
 				BBDCF3F5249C31A2007A5C84 /* FormScreenVC.swift in Sources */,
+				BB23948A249F2E4100610F4B /* ChatRoomModel.swift in Sources */,
 				BBDCF3FB249C6644007A5C84 /* FormScreenModel.swift in Sources */,
 				BB2E214F249B637000E2D3F0 /* MainChatRoomPresenter.swift in Sources */,
+				BB239488249F2E1A00610F4B /* ChatRoomPresenter.swift in Sources */,
 				BB2E2137249B60CE00E2D3F0 /* AppDelegate.swift in Sources */,
 				BBDCF3FE249C6A70007A5C84 /* Alert.swift in Sources */,
 				BBDCF400249C6A97007A5C84 /* IView.swift in Sources */,
