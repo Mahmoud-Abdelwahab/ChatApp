@@ -47,7 +47,7 @@ class MessageCell: UITableViewCell {
         }else if type == .outgoing {
              stackView.alignment = .trailing
             chatTextBubble.backgroundColor = #colorLiteral(red: 0.2005997582, green: 0.6044861711, blue: 0.8183692893, alpha: 1)
-                messageField.textColor = #colorLiteral(red: 0.80113103, green: 0.8147794472, blue: 0.8183692893, alpha: 1)
+                messageField.textColor = #colorLiteral(red: 0.9725490196, green: 0.9725490196, blue: 0.9725490196, alpha: 1)
         }
     }
     

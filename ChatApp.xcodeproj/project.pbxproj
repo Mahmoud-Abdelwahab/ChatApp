@@ -13,6 +13,7 @@
 		BB23948A249F2E4100610F4B /* ChatRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB239489249F2E4100610F4B /* ChatRoomModel.swift */; };
 		BB23948C249F5F5100610F4B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23948B249F5F5100610F4B /* MessageCell.swift */; };
 		BB23948E249F683200610F4B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23948D249F683200610F4B /* Message.swift */; };
+		BB239490249FB91600610F4B /* MainChatRoomVC+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23948F249FB91600610F4B /* MainChatRoomVC+Extentions.swift */; };
 		BB2D16EC249E024B00F09B3F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D16EB249E024B00F09B3F /* Room.swift */; };
 		BB2D16EF249E755200F09B3F /* ChatRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D16EE249E755200F09B3F /* ChatRoomVC.swift */; };
 		BB2E2137249B60CE00E2D3F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E2136249B60CE00E2D3F0 /* AppDelegate.swift */; };
@@ -26,6 +27,8 @@
 		BB2E2153249B639A00E2D3F0 /* IMainChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2E2152249B639A00E2D3F0 /* IMainChatRoom.swift */; };
 		BB2E2156249B663B00E2D3F0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BB2E2155249B663B00E2D3F0 /* logo.png */; };
 		BB2E2158249B675B00E2D3F0 /* ChatLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BB2E2157249B675B00E2D3F0 /* ChatLogo.png */; };
+		BB580DC224A03D2F00E32D66 /* ChatRoomVC+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB580DC124A03D2F00E32D66 /* ChatRoomVC+Extentions.swift */; };
+		BB580DC424A03E1900E32D66 /* FormScreenVC+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB580DC324A03E1900E32D66 /* FormScreenVC+Extentions.swift */; };
 		BBDCF3F3249BE266007A5C84 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF3F2249BE266007A5C84 /* FormCell.swift */; };
 		BBDCF3F5249C31A2007A5C84 /* FormScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF3F4249C31A2007A5C84 /* FormScreenVC.swift */; };
 		BBDCF3F7249C6619007A5C84 /* IFormScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF3F6249C6619007A5C84 /* IFormScreen.swift */; };
@@ -47,6 +50,7 @@
 		BB239489249F2E4100610F4B /* ChatRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomModel.swift; sourceTree = "<group>"; };
 		BB23948B249F5F5100610F4B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		BB23948D249F683200610F4B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		BB23948F249FB91600610F4B /* MainChatRoomVC+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainChatRoomVC+Extentions.swift"; sourceTree = "<group>"; };
 		BB2D16EB249E024B00F09B3F /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		BB2D16EE249E755200F09B3F /* ChatRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomVC.swift; sourceTree = "<group>"; };
 		BB2E2133249B60CE00E2D3F0 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +66,8 @@
 		BB2E2152249B639A00E2D3F0 /* IMainChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMainChatRoom.swift; sourceTree = "<group>"; };
 		BB2E2155249B663B00E2D3F0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		BB2E2157249B675B00E2D3F0 /* ChatLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChatLogo.png; sourceTree = "<group>"; };
+		BB580DC124A03D2F00E32D66 /* ChatRoomVC+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatRoomVC+Extentions.swift"; sourceTree = "<group>"; };
+		BB580DC324A03E1900E32D66 /* FormScreenVC+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormScreenVC+Extentions.swift"; sourceTree = "<group>"; };
 		BBDCF3F2249BE266007A5C84 /* FormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
 		BBDCF3F4249C31A2007A5C84 /* FormScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormScreenVC.swift; sourceTree = "<group>"; };
 		BBDCF3F6249C6619007A5C84 /* IFormScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFormScreen.swift; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 				BB239489249F2E4100610F4B /* ChatRoomModel.swift */,
 				BB239485249F2D2500610F4B /* IChatRoom.swift */,
 				BB23948B249F5F5100610F4B /* MessageCell.swift */,
+				BB580DC124A03D2F00E32D66 /* ChatRoomVC+Extentions.swift */,
 			);
 			path = ChatRoom;
 			sourceTree = "<group>";
@@ -162,6 +169,7 @@
 				BBDCF3FA249C6644007A5C84 /* FormScreenModel.swift */,
 				BBDCF3F6249C6619007A5C84 /* IFormScreen.swift */,
 				BBDCF3F2249BE266007A5C84 /* FormCell.swift */,
+				BB580DC324A03E1900E32D66 /* FormScreenVC+Extentions.swift */,
 			);
 			path = FormScreen;
 			sourceTree = "<group>";
@@ -173,6 +181,7 @@
 				BB2E214E249B637000E2D3F0 /* MainChatRoomPresenter.swift */,
 				BB2E2150249B638C00E2D3F0 /* MainChatRoomModel.swift */,
 				BB2E2152249B639A00E2D3F0 /* IMainChatRoom.swift */,
+				BB23948F249FB91600610F4B /* MainChatRoomVC+Extentions.swift */,
 			);
 			path = MainChatRoom;
 			sourceTree = "<group>";
@@ -331,6 +340,7 @@
 				BB2E2151249B638C00E2D3F0 /* MainChatRoomModel.swift in Sources */,
 				BBDCF404249C6AF6007A5C84 /* IViewAdvancedAlert.swift in Sources */,
 				BBDCF3F5249C31A2007A5C84 /* FormScreenVC.swift in Sources */,
+				BB580DC224A03D2F00E32D66 /* ChatRoomVC+Extentions.swift in Sources */,
 				BB23948A249F2E4100610F4B /* ChatRoomModel.swift in Sources */,
 				BBDCF3FB249C6644007A5C84 /* FormScreenModel.swift in Sources */,
 				BB2E214F249B637000E2D3F0 /* MainChatRoomPresenter.swift in Sources */,
@@ -341,7 +351,9 @@
 				BBDCF3F3249BE266007A5C84 /* FormCell.swift in Sources */,
 				BB2E214D249B635000E2D3F0 /* MainChatRoomVC.swift in Sources */,
 				BB23948E249F683200610F4B /* Message.swift in Sources */,
+				BB580DC424A03E1900E32D66 /* FormScreenVC+Extentions.swift in Sources */,
 				BB2E2139249B60CE00E2D3F0 /* SceneDelegate.swift in Sources */,
+				BB239490249FB91600610F4B /* MainChatRoomVC+Extentions.swift in Sources */,
 				BBDCF3F9249C662F007A5C84 /* FormScreenPresenter.swift in Sources */,
 				BBDCF3F7249C6619007A5C84 /* IFormScreen.swift in Sources */,
 				BB23948C249F5F5100610F4B /* MessageCell.swift in Sources */,

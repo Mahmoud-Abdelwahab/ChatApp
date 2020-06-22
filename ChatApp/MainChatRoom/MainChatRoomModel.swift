@@ -52,25 +52,25 @@ class MainChatRoomModel : IMainChatRoomModel{
     
     
     func roomObserver() {
-         
-      //  var count = 0
+        
+        //  var count = 0
         dataBaseRef!.child("rooms").observe(.childAdded) { (snapShot) in
             
             print(snapShot)
             
             guard let data = snapShot.value as? Dictionary<String , Any> else { return }
             
-              print(data["userID"])
+            print(data["userID"])
             
-           
+            
             self.roomList.append(Room(userID: data["userID"] as! String, roomName: data["roomName"] as! String, roomID:snapShot.key ))
             
-           // count = count + 1
+            // count = count + 1
             
             self.mainChatPrsenter.onRecieveFirebaseRooms(roomsList: self.roomList)
         }
         
-       
+        
         
     }
     

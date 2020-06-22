@@ -8,53 +8,11 @@
 
 import UIKit
 import Firebase
-class MainChatRoomVC: UIViewController , UITableViewDelegate , UITableViewDataSource ,IMainChatRoomVC{
-   
+class MainChatRoomVC: UIViewController{
+    
     var roomList : [Room] = [];
     
-   func onRoomsReceived(roomsList: [Room]) {
-       roomList = roomsList
-    roomsTable.reloadData()
-     }
     
-    
-    func onSuccess() {
-     
-        roomTextField.text  = ""
-    }
-    
-    func onFail() {
-        let alert = UIAlertController.init(title: "Alert", message: "Something Went Wrong !", preferredStyle: .alert)
-        let dismissButton = UIAlertAction.init(title: "Dismiss", style: .default, handler: nil)
-               alert.addAction(dismissButton)
-               self.present(alert,animated: true){
-                   //  self.dismiss(animated: true, completion: nil)
-               }
-        
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return roomList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
-        let cell = self.roomsTable.dequeueReusableCell(withIdentifier: "roomCell")!
-        cell.textLabel?.text = roomList[indexPath.row].roomName
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let chatRoom = self.storyboard?.instantiateViewController(withIdentifier: "ChatRoom") as! ChatRoomVC
-        
-        let selectedRoom = self.roomList[indexPath.row]
-       
-        chatRoom.room = selectedRoom
-        self.navigationController?.pushViewController(chatRoom, animated: true)
-        
-        
-    }
     
     @IBAction func CreateRoomBtn(_ sender: Any) {
         
@@ -76,7 +34,7 @@ class MainChatRoomVC: UIViewController , UITableViewDelegate , UITableViewDataSo
     
     override func viewWillAppear(_ animated: Bool) {
         if Auth.auth().currentUser?.uid == nil{
-           
+            
             self.formScreen?.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
             self.present(formScreen! , animated:  true , completion: nil)
         }
@@ -90,6 +48,7 @@ class MainChatRoomVC: UIViewController , UITableViewDelegate , UITableViewDataSo
         
         self.roomsTable.delegate = self
         self.roomsTable.dataSource = self
+        self.roomsTable.separatorStyle = .none  // clear separators
         
         
         mainPresenterRef = MainChatRoomPresenter( mainVCRef:self)
